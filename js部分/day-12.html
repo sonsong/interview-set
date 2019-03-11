@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        undefined
+        arguments.length 传递参数的个数
+        bar.length 定义函数时参数的个数
+        */
+        var yideng = {
+            bar(){
+                return this.baz;
+            },
+            baz: 1
+        };
+        (function(){
+            console.log(typeof arguments[0]());
+        })(yideng.bar);
+      
+    </script>
+</body>
+</html>

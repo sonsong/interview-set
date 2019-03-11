@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const timeout = ms => new Promise((resolve, reject) => {
+           setTimeout(() =>{
+               resolve();
+           }, ms);
+       });
+
+       const ajax1 = () => timeout(2000).then(() =>{
+           console.log(1);
+           return 1;
+       })
+
+       const ajax2 = () => timeout(2000).then(() =>{
+           console.log(2);
+           return 2;
+       })
+
+       const ajax3 = () => timeout(2000).then(() =>{
+           console.log(3);
+           return 3;
+       })
+
+       const mergePromise = (ajaxArray) => {
+            let [ajax1, ajax2, ajax3] = ajaxArray;
+            
+       }
+
+       mergePromise([ajax1, ajax2, ajax3]).then(data =>{
+           console.log("done");
+           console.log(data);
+       })
+    </script>
+</body>
+</html>

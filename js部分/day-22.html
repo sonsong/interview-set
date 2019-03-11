@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //callback 函数只会在有值的索引上被调用；
+        //那些从来没被赋过值或者使用 delete 删除的索引则不会被调用。
+        var yideng = Array(3);
+        yideng[0] = 2;
+
+        var result = yideng.map(elem => '1');
+        console.log(result)
+    </script>
+</body>
+</html>
